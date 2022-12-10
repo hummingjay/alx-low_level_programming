@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main -prints the alphabet in lowercaser apart from q and e
+ * main - prints the alphabet in lowercaser apart from q and e.
  *
- * return : always 0
+ * Return: always 0.
  */
 int main(void)
 {
