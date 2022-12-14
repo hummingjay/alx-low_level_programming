@@ -5,11 +5,11 @@
  *
  * Return: 0 success
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char i;
 
-	for (i='a'; c <= 'z'; i++)
+	for (i='a'; i <= 'z'; i++)
 	{
 		_putchar(i);
 	}
