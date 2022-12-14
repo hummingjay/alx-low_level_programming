@@ -13,8 +13,12 @@ void print_alphabet_x10(void)
 	tot = 0;
 
 	while (tot < 10)
+	{
 		for (n = 'a'; n <= 'z'; n++)
+		{
 			_putchar(n);
+		}
 		tot++;
 		_putchar('\n');
+	}
 }
