@@ -4,6 +4,8 @@
  * program that prints numbers 1 - 100 followed by new line
  * but multiples of 3 print fizz and multiples of
  * 5 buzz. multiples of 3 and 5 = fizzbuzz
+ *
+ * Return: 0 success
  */
 int main()
 {
