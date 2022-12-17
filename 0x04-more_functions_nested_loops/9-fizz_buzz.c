@@ -16,16 +16,17 @@ int main()
 		if (i % 3 == 0)
 		{
 			printf("Fizz");
-			printf(" ");
 		}
 		else if (i % 5 == 0)
 		{
 			printf("Buzz");
-			printf(" ");
 		}
 		else if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("Fizz Buzz");
+		}
+		else if(x != 100)
+		{
 			printf(" ");
 		}
 		else
