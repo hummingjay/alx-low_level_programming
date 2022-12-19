@@ -6,7 +6,7 @@
  * @dest: 1st argument char type pointer
  * @src: 2nd argument char type pointer
  *
- * Return: na
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
