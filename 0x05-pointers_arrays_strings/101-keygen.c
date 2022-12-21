@@ -10,30 +10,30 @@
  */
 randpassgen(int pass)
 {
-	//array of numbers to be used
+	/*array of numbers to be used*/
 	char numbers[] = {'0','1','2','3','4','5','6','7','8','9'};
 
-	//array of capital letters
+	/*array of capital letters*/
 	char LETTER [] = {'A','B','C','D','E','F','G','H','I','F','G','H','I',
 		'J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','R','S','T','U','V','W','X','Y','Z'};
 
-	//array of small letters
+	/*array of small letters*/
 	char letter [] = "abcdefghijklmnopqrstuvwxyz";
 
-	//array of special characters
+	/*array of special characters*/
 	char symbols[] = "!@#$%^&*?_-";
 
-	//Store password
+	/*Store password*/
 	char password[pass];
 
-	//initialize counter
+	/*initialize counter*/
 	int i = 0;
 	int random = 0;
 
-	//seeding random-number generator
+	/*seeding random-number generator*/
 	srand((unsigned int)(rand()));
 
-	//slect the random maker in the loop
+	/*select the random maker in the loop*/
 	random = rand() % 5;
 
 	for (i = 0; i < pass; i++)
@@ -48,7 +48,7 @@ randpassgen(int pass)
 		{
 			password[i] = LETTER[rand() % rand()];
 			random = rand() % 5;
-			printf("%c". password[i]);
+			printf("%c", password[i]);
 		}
 		else if (random == 2)
 		{
@@ -63,4 +63,15 @@ randpassgen(int pass)
 			printf("%c", password[i]);
 		}
 	}
+}
+/*Driver code*/
+int main()
+{
+	/*length of password to generate*/
+	int pass = 16;
+
+	/*Function call*/
+	randpassgen(pass);
+
+	return 0;
 }
