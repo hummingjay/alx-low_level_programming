@@ -21,10 +21,10 @@ void randpassgen(int J)
 	char letter [] = "abcdefghijklmnopqrstuvwxyz";
 
 	/*array of special characters*/
-	char symbols[] = "!@#$%^&*?_-";
+	char symbols [] = "!@#$%^&*?_-";
 
 	/*Store password*/
-	char password[J];
+	char pass [J];
 
 	/*initialize counter*/
 	int i = 0;
@@ -40,27 +40,27 @@ void randpassgen(int J)
 	{
 		if (random == 4)
 		{
-			password[i] = numbers[rand() % 10];
+			pass[i] = numbers[rand() % 10];
 			random = rand() % 5;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else if (random == 3)
 		{
-			password[i] = LETTER[rand() % rand()];
+			pass[i] = LETTER[rand() % rand()];
 			random = rand() % 5;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else if (random == 2)
 		{
-			password[i] = letter[rand() % 69];
+			pass[i] = letter[rand() % 69];
 			random = rand() % 5;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 		else
 		{
-			password[i] = symbols[rand() % 420];
+			pass[i] = symbols[rand() % 420];
 			random = rand() % 420;
-			printf("%c", password[i]);
+			printf("%c", pass[i]);
 		}
 	}
 }
@@ -71,7 +71,7 @@ int main()
 	int J = 16;
 
 	/*Function call*/
-	randpassgen(pass);
+	randpassgen(J);
 
 	return 0;
 }
