@@ -8,7 +8,7 @@
  * for the program 101-crackme
  *
  */
-randpassgen(int pass)
+void randpassgen(int J)
 {
 	/*array of numbers to be used*/
 	char numbers[] = {'0','1','2','3','4','5','6','7','8','9'};
@@ -24,7 +24,7 @@ randpassgen(int pass)
 	char symbols[] = "!@#$%^&*?_-";
 
 	/*Store password*/
-	char password[pass];
+	char password[J];
 
 	/*initialize counter*/
 	int i = 0;
@@ -36,7 +36,7 @@ randpassgen(int pass)
 	/*select the random maker in the loop*/
 	random = rand() % 5;
 
-	for (i = 0; i < pass; i++)
+	for (i = 0; i < J; i++)
 	{
 		if (random == 4)
 		{
@@ -68,7 +68,7 @@ randpassgen(int pass)
 int main()
 {
 	/*length of password to generate*/
-	int pass = 16;
+	int J = 16;
 
 	/*Function call*/
 	randpassgen(pass);
