@@ -24,6 +24,7 @@ void randpassgen(int J)
 	char symbols [] = "!@#$%^&*?_-";
 
 	/*Store password*/
+	char h = J
 	char pass [] = J;
 
 	/*initialize counter*/
