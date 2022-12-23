@@ -14,7 +14,11 @@ char *leet(char *s)
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (s[a] == j[a] || s[a] + 32 = j[a])
+		if (s[a] == j[a])
+		{
+			s[a] = t[a];
+		}
+		else if (s[a] + 32 = j[a])
 		{
 			s[a] = t[a];
 		}
