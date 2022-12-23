@@ -6,9 +6,10 @@
  *
  * @str: pointer to string
  */
-char *string_toupper(char *str)
+char *string_toupper(char *)
 {
 	int i;
+	char *str
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
