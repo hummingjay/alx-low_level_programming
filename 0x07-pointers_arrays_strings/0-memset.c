@@ -10,11 +10,11 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	char s = const b;
-	
-	for (int n = 0; n < 10; n++)
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
 	{
-		_putchar("%c\n", *s);
-		return (s);
+		s[i] = b;
 	}
+	return (s);
 }
