@@ -4,6 +4,8 @@
  * _chessboard - function that prints chessboard
  * @a: pointer to array
  * @8: array 8 of char
+ * first iterate thru row then define pointer the
+ * iterate theu column and print each section
  *
  * Return: chessboard
  */
@@ -11,13 +13,10 @@ void print_chessboard(char (*a)[8])
 {
 	int row, col;
 
-	/* iterating through rows*/
 	for (row = 0; row < 8; row++)
 	{
-		/* pointer to current row*/
 		char *current_row = a[row];
 
-		/* iterate through columns and print each section*/
 		for (col = 0; col < 8; col++)
 		{
 			_putchar(*(current_row + col));
