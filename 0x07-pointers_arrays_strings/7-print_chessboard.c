@@ -20,8 +20,8 @@ void print_chessboard(char (*a)[8])
 		/* iterate through columns and print each section*/
 		for (col = 0; col < 8; col++)
 		{
-			int b = (*(current_row + col));
+			_putchar(*(current_row + col));
 		}
+		_putchar('\n');
 	}
-	return ();
 }
