@@ -17,13 +17,8 @@ void print_diagsums(int *a, int size)
 	for (int i = 0; i < size; i++)
 	{
 		sum1 += *(a + i * size + i);
+		return (sum1);
 		sum2 += *(a + i * size + (size - i - 1));
+		return (sum2);
 	}
-
-	/* Print the results*/
-
-	_putchar("Sum of primary diagonal: %d\n", sum1);
-	_putchar("Sum of secondary diagonal: %d\n", sum2);
-
-	return(NULL);
 }
