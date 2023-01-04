@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _diagsums - prints sum of the two diagonals of a square matrix
@@ -22,8 +22,8 @@ void print_diagsums(int *a, int size)
 
 	/* Print the results*/
 
-	printf("Sum of primary diagonal: %d\n", sum1);
-	printf("Sum of secondary diagonal: %d\n", sum2);
+	_putchar("Sum of primary diagonal: %d\n", sum1);
+	_putchar("Sum of secondary diagonal: %d\n", sum2);
 
 	return(NULL);
 }
