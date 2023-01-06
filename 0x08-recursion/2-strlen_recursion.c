@@ -18,7 +18,8 @@ int _strlen_recursion(char *s)
 	}
 	else
 	{
-		/**return value 1 which will be added up for each
+		/**
+		 * return value 1 which will be added up for each
 		 * string value to find length so 1 + 1 and
 		 * move the value up by 1 upto where
 		 * code will end with the + 0,
