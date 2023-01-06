@@ -23,6 +23,6 @@ int _strlen_recursion(char *s)
 		 * move the value up by 1 upto where
 		 * code will end with the + 0,
 		 */
-		return ( 1 + _strlen_recursion(s + 1));
+		return (1 + _strlen_recursion(s + 1));
 	}
 }
