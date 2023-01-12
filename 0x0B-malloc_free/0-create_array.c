@@ -8,8 +8,7 @@
  * @size: size of memory to print
  * @c: char to initialize with
  *
- * Return: Null if size is 0
- * Return: pointer to array, or NULL if it fails
+ * Return: pointer to array, or NULL if it fails, fails when size is 0
  */
 char *create_array(unsigned int size, char c)
 {
