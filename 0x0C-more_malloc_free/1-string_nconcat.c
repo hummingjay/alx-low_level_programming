@@ -12,7 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *copy;
-	unsigned int s1size, s2size;
+	unsigned int s1size, s2size, buffersize;
 
 	if (s1 == NULL)
 		s1 = " ";
@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		else
 		{
-			copy[n] = s2[i - s1size];
+			copy[n] = s2[n - s1size];
 		}
 	}
 	s1[buffersize] = '\0';
