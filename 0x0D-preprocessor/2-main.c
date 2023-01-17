@@ -5,8 +5,9 @@
  *
  * Return: 0
  */
-void main()
+int main(void)
 {
 	/* it's a string use %s*/
 	printf("%s\n", _FILE_);
+	return 0;
 }
