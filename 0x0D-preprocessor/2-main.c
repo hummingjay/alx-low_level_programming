@@ -2,11 +2,12 @@
 
 /**
  * main - prints the path of the current file
+ * @void: accept nothing
  *
  * Return: 0
  */
 int main(void)
 {
-	printf("%s\n", _FILE_);
-	return (0);
+	printf("%s\n", __FILE__);
+	return 0;
 }
