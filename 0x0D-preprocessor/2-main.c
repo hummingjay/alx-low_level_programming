@@ -8,6 +8,6 @@
 int main(void)
 {
 	/* it's a string use %s*/
-	printf("%s\n", _FILE_);
+	_putchar("%s\n", _FILE_);
 	return 0;
 }
