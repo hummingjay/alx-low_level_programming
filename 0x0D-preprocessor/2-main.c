@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * _FILE_ - prints the path of the current file
+ * main - prints the path of the current file
  *
  * Return: 0
  */
-int main(void)
+void main()
 {
-	/* it's a string use %s*/
-	_putchar(_FILE_);
-	return 0;
+	printf("%s\n", _FILE_);
+	return (0);
 }
