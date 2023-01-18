@@ -5,4 +5,9 @@ typedef struct dog
 	char *name;
 	float age;
 	char *owner;
-}dog;
+}my_dog;
+int main(void)
+{
+	struct dog my_dog;
+	return (0);
+}
