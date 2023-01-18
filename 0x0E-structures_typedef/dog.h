@@ -8,12 +8,12 @@
  *
  * Description: about the dog and data about it
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
 /*more prototypes for functions*/
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
