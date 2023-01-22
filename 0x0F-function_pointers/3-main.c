@@ -9,7 +9,7 @@
  * Return: 98 if arg wrong or / by zero or 
  * arg more than 2
  */
-int main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, calc;
 	char *operator;
@@ -24,7 +24,7 @@ int main(int argc, int *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (get_op_func(operator) == NULL || op[1] != '\0')
+	if (get_op_func(operator) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
