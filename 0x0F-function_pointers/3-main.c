@@ -12,6 +12,7 @@
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2, calc;
+	int (*res)(int, int);
 	char *operator;
 
 	if (argc != 4)
@@ -24,18 +25,19 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	operator = argv[2];
 	num2 = atoi(argv[3]);
 
-	if (get_op_func(operator) == NULL || operator[1] != '\0')
+	if (get_op_func(argv[2]) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((*operator == "/" || *operator == "%") && (num2 == '0'))
+	if ((*operator == '/' || *operator == '%') && (num2 == '0'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	calc = get_op_func(operator)(num1, num2);
+	res = get_op_func(operator);
+	calc = res(num1, num2);
 
 	printf("%d\n", calc);
 	return (0);

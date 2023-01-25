@@ -27,7 +27,9 @@ int op_sub(int a, int b)
  * @b: second integer
  */
 int op_mul(int a, int b)
+{
 	return (a * b);
+}
 /**
  * op_sub - returns division
  * @a: first integer
