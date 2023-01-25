@@ -9,7 +9,7 @@
  * Return: 98 if arg wrong or / by zero or 
  * arg more than 2
  */
-int main(int argc, char *argv[])
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	int num1, num2, calc;
 	char *operator;
