@@ -5,6 +5,8 @@
 /**
  * main - check code
  * @atoi: convert string input to integer
+ * @argc: arguments
+ * @argv: pointers to arguments
  *
  * Return: 98 if arg wrong or / by zero or 
  * arg more than 2
