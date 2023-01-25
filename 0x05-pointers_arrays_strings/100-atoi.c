@@ -9,17 +9,6 @@
  */
 int _atoi(char *s)
 {
-#include "main.h"
-#include <stdio.h>
-
-/**
- * _atoi - Convert a string to an integer.
- * @s: The pointer to be converted
- *
- * Return: an integer
- */
-int _atoi(char *s)
-{
         int c = 0;
         unsigned int ni = 0;
         int min = 1;
