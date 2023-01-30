@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * pre_main: function to print string before main is
+ * pre_main - function to print string before main is
  * executed.
  *
  * Return: 0
@@ -12,6 +12,7 @@ void pre_main(void)
 {
 	char *message;
 
-	message = "You're beat! and yet, you must allow,\nI bore my house upon my back!\n";
+	message = "You're beat! and yet, you must allow,\n
+		I bore my house upon my back!\n";
 	printf("%s", messsage);
 }
