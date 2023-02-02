@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * listint_len - function that returns number of elements 
+ * listint_len - function that returns number of elements
  * in the linked list
  *
  * @h: pointer to node
