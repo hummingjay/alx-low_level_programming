@@ -1,5 +1,16 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * _strlen - calculte lenght of string
+ * @s: input
+ * Return: string length
+ */
+unsigned int _stlen(const char *s)
+{
+	int i;
+	for (i = 0; s[i]; i++);
+	return (i);
+}
 
 /**
  * binary_to_uint - function that converts binary number
@@ -11,23 +22,18 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
-	int i,base = 1;
+	int i, base = 1, length = _stlen(b);
 
-	if (b == NUll)
+	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i]; i++)
+	for (i = (length - 1); b[i]; i--)
 	{
 		if (b[i] != 0 && b[i] != 1)
 			return (0);
-	}
-
-	while (i >= 0)
-	{
-		/* find value of current base then add to result and traverse backward*/
-		result = result + (b[i] * base);
+		if (b[i] == 1)
+			result += base;
 		base *= 2;
-		i--;
 	}
-	return(result);
+	return (result);
 }
