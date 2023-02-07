@@ -9,25 +9,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	int rem;
+	int i = 0, k, bit;
 
 	if (n == 0)
-	{
 		_putchar('0');
-	}
 
-	if (n >= 1)
+	while (n != 0)
 	{
-		if (n == 1)
-		{
-			_putchar('1');
-		}
-		rem = n % 2;
-		n = n / 2;
+		i++;
+		n = n >> 1;
+	}
+	for (bit = i - 1; bit >= 0; bit--)
+	{
+		k = n >> bit;
 
-		if (rem == 1)
+		if (k & 1)
 			_putchar('1');
-		if (rem == 0)
+		else
 			_putchar('0');
 	}
 }
