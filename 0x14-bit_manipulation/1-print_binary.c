@@ -9,21 +9,25 @@
  */
 void print_binary(unsigned long int n)
 {
-	char rem;
+	int rem;
 
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	if (n == 1)
-	{
-		_putchar('1');
-	}
 
-	if (n > 1)
+	if (n >= 1)
 	{
-		n = n / 2;
+		if (n == 1)
+		{
+			_putchar('1');
+		}
 		rem = n % 2;
-		_putchar('rem');
+		n = n / 2;
+
+		if (rem == 1)
+			_putchar('1');
+		if (rem == 0)
+			_putchar('0');
 	}
 }
