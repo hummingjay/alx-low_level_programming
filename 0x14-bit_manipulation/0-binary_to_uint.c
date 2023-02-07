@@ -24,9 +24,11 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int result = 0;
 	int i, base = 1, length = _stlen(b);
 
+	/*return 0 when b is NULL*/
 	if (b == NULL)
 		return (0);
 
+	/*loop to  traverse string in reverse and convert to base 10*/
 	for (i = (length - 1); b[i]; i--)
 	{
 		if (b[i] != '0' && b[i] != '1')
