@@ -10,37 +10,32 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file, totwrite, totread;
-	char *buffer;
+	int file, rd, wr;
+	char *buf;
 
-	/*If no filename*/
-	if (filename == 0)
+	if (filename == NULL)
 		return (0);
 
 	file = open(filename, O_RDONLY);
 
-	/*if file can't be opened*/
 	if (file == -1)
 		return (0);
-	buffer = malloc(sizeof(char) * letters + 1);
-	/*if no space allocated*/
-	if (buffer == NULL)
-		return (0);
-	/*Syntax: read(int fd, void *bf, size_t count);*/
-	totread = read(file, buffer, letters);
-	/*if file can't be read*/
-	if (totread == -1)
+
+	buf = malloc(sizeof(char) * letters + 1);
+	if (buf == NULL)
 		return (0);
 
-	buffer[letters] = '\0';
-
-	/*ssize_t write(int fd, const void *buf, size_t count);*/
-	totwrite = write(file, buffer, letters);
-	/*if write fails*/
-	if (totwrite == -1)
+	rd = read(file, buf, letters);
+	if (rd == -1)
 		return (0);
-	/*int close(int fd)*/
+
+	buf[letters] = '\0';
+
+	wr = write(1, buf, rd);
+	if (wr == -1)
+		return (0);
+
 	close(file);
-	free(buffer);
-	return (totwrite);
+	free(buf);
+	return (wr);
 }
