@@ -24,5 +24,5 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		return NULL;
 
 	/* Return pointer to current node*/
-	return (current);
+	return (this_node);
 }
