@@ -13,13 +13,13 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node, *temp;
 
-	if (!head)
+	if (head == NULL)
 	{
 		return (NULL);
 	}
 
 	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
@@ -27,8 +27,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new_node->n = n;
 	new_node->next = NULL;
 
-	/* CHeck if list is empty or not anf if empty head is NULL */
-	if (!head)
+	/* CHeck if list is empty or not and if empty head is NULL */
+	if (*head == NULL)
 	{
 		/* sets prev to NULL to show no node before */
 		new_node->prev = NULL;
@@ -38,7 +38,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	/* Traverse list until no next node found */
 	temp = *head;
-	while (temp->next)
+	while (temp->next != NULL)
 	{
 		temp = temp->next;
 	}
