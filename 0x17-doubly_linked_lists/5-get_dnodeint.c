@@ -21,7 +21,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	/* If your node or NODE before yours is reached is NULL return NULL*/
 	if (this_node == NULL)
-		return NULL;
+	{
+		return (NULL);
+	}
 
 	/* Return pointer to current node*/
 	return (this_node);
