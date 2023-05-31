@@ -24,15 +24,15 @@ $(NAME): $(OBJ)
 # clean, deletes the following
 # *~: Emacs temp files, .*~: Vim temp files, #*# backups
 clean:
-	RM $(NAME) *~ .*~ #*#
+	$(RM) $(NAME) *~ .*~ #*#
 
 #oclean, deletes the object files
 oclean:
-	RM $(OBJ)
+	$(RM) $(OBJ)
 
 # fclean, works like clean and oclean
 fclean:
-	RM $(OBJ) $(NAME) *~ .*
+	$(RM) $(OBJ) $(NAME) *~ .*
 
 # re, forces recompilation of all source files
 re: fclean all
