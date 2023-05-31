@@ -24,7 +24,7 @@ $(NAME): $(OBJ)
 # clean, deletes the following
 # *~: Emacs temp files, .*~: Vim temp files, #*# backups
 clean:
-	$(RM) $(NAME) *~ .*~ #*#
+	$(RM) $(NAME) *~ .*~ 
 
 #oclean, deletes the object files
 oclean:
