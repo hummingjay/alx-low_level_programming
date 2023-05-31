@@ -1,0 +1,15 @@
+# assigning variable to rep the compiler
+CC = gcc
+
+# variable for all the c files
+SRC = main.c school.c
+
+# variable for all the o files
+OBJ = main.o school.o
+
+# variable for the name
+NAME = school
+
+# the code
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
