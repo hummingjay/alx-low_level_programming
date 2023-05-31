@@ -1,7 +1,10 @@
 # variable for the compiler
 CC = gcc
 
+# Variable to rep the .c files
+SRC = *.c
+
 all: school
 
 school: main.c school.c
-	CC main.c school.c -o school
+	CC SRC
