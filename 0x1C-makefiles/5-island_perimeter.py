@@ -29,4 +29,6 @@ def island_perimeter(grid):
                     if 0 <= new_i < row and 0 <= new_j < column:
                         if grid[new_i][new_j] != 1:
                             tot += 1
+                    else:
+                        tot += 1
     return tot
