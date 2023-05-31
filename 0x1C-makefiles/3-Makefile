@@ -31,8 +31,7 @@ oclean:
 	$(RM) $(OBJ)
 
 # fclean, works like clean and oclean
-fclean:
-	$(RM) $(OBJ) $(NAME) *~ .*
+fclean: clean oclean
 
 # re, forces recompilation of all source files
 re: fclean all
