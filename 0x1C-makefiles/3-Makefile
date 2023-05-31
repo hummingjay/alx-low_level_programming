@@ -11,6 +11,9 @@ OBJ = $(SRC:.c=.o)
 # variable for the name
 NAME = school
 
+# variable to delete files
+RM = rm -f
+
 # rules
 # bulids executable
 all: $(NAME)
@@ -21,15 +24,15 @@ $(NAME): $(OBJ)
 # clean, deletes the following
 # *~: Emacs temp files, .*~: Vim temp files, #*# backups
 clean:
-	rm -f $(NAME) *~ .*~ #*#
+	RM $(NAME) *~ .*~ #*#
 
 #oclean, deletes the object files
 oclean:
-	rm -f $(OBJ)
+	RM $(OBJ)
 
 # fclean, works like clean and oclean
 fclean:
-	rm -f $(OBJ) $(NAME) *~ .*
+	RM $(OBJ) $(NAME) *~ .*
 
 # re, forces recompilation of all source files
 re: fclean all
