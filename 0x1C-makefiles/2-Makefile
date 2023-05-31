@@ -5,6 +5,7 @@ CC = gcc
 SRC = main.c school.c
 
 # variable for all the o files
+# using pattern substitution prevents sep list for .o
 OBJ = $(SRC:.c=.o)
 
 # variable for the name

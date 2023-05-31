@@ -1,0 +1,35 @@
+# assigning variable to rep the compiler
+CC = gcc
+
+# variable for all the c files
+SRC = main.c school.c
+
+# variable for all the o files
+# using pattern substitution prevents sep list for .o
+OBJ = $(SRC:.c=.o)
+
+# variable for the name
+NAME = school
+
+# rules
+# bulids executable
+all: $(NAME)
+       	
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# clean, deletes the following
+# *~: Emacs temp files, .*~: Vim temp files, #*# backups
+clean:
+	rm -f $(NAME) *~ .*~ #*#
+
+#oclean, deletes the object files
+oclean:
+	rm -f $(OBJ)
+
+# fclean, works like clean and oclean
+fclean:
+	rm -f $(OBJ) $(NAME) *~ .*
+
+# re, forces recompilation of all source files
+re: fclean all
