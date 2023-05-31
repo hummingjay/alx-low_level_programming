@@ -4,16 +4,17 @@ this program defines a function,
 this function calculates the perimeter of an island
 """
 
+
 def island_perimeter(grid):
     """
     Function that returns the perimeter of the island
     """
 
     directions = [
-            (-1, 0), # up
-            (0, 1), # right
-            (1, 0), # down
-            (0, -1) # left
+            (-1, 0),  # up
+            (0, 1),  # right
+            (1, 0),  # down
+            (0, -1)  # left
             ]
 
     row, column = len(grid), len(grid[0])
