@@ -14,21 +14,21 @@ int linear_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 	{
-		//return -1 if array is null
+		/*return -1 if array is null*/
 		return -1;
 	}
 
 	for (i = 0; i < size; i++)
 	{
-		//print value being compared %u for the size_t
-		printf("Value checked array[%u] = %d\n", i, array[i]);
+		/*print value being compared %lu for the size_t*/
+		printf("Value checked array[%lu] = %d\n", i, array[i]);
 
 		if (array[i] == value)
 		{
-			//return index of value
+			/*return index of value*/
 			return i;
 		}
 	}
-	// return -1 if value not found
+	/* return -1 if value not found */
 	return -1;
 }
