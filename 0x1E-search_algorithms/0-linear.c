@@ -7,12 +7,13 @@
  *
  * Return: returns first index where value is located
  */
+
 int linear_search(int *array, size_t size, int value)
 {
 	if (array == NULL)
 	{
 		//return -1 if array is null
-		return -1
+		return -1;
 	}
 
 	for (size_t i = 0; i < size; i++)
@@ -27,5 +28,5 @@ int linear_search(int *array, size_t size, int value)
 		}
 	}
 	// return -1 if value not found
-	return -1
+	return -1;
 }
